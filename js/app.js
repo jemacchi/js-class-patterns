@@ -6,13 +6,15 @@
  */
 define([
 	'helpers/loghelper',
+	'patterns/runner',
   ],
-  function(LogHelper) {
+  function(LogHelper, PatternsRunner) {
+	
+	log = new LogHelper();
 	
     var init = function() {
-	  var aLogHelper = new LogHelper();
-	  aLogHelper.add('Hello World !!!');
-	  aLogHelper.show();
+	  var aPatternsRunner = new PatternsRunner();
+	  aPatternsRunner.runAbstractFactoryDemo();
     };
 
     return {

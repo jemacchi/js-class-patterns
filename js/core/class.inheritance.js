@@ -1,18 +1,27 @@
-/**
- * Simple JavaScript Inheritance. Base Inheritance Class to be extended by
- * every class on the application.
- *
- * @author  Jose macchi <jemacchi@yahoo.com.ar>
- * Based on John Resig inheritance
- */
 // Inspired by base2 and Prototype
-(function(){
+(
+  /**
+   * Simple JavaScript Inheritance. Base Inheritance Class to be extended by
+   * every class on the application.
+   * @exports core   
+   * @version 1.0
+   * @author  Jose Macchi <jemacchi@yahoo.com.ar>
+   */	
+function(){
   var initializing = false,
     fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
 
   // The base Class implementation (does nothing)
+  /**
+   * Simple JavaScript Inheritance. Base Inheritance Class to be extended by
+   * every class on the application.
+   *
+   * @author  Jose macchi <jemacchi@yahoo.com.ar>
+   * @class Class
+   * Based on John Resig inheritance
+   */  
   this.Class = function(){};
-
+	
   // Create a new Class that inherits from this class
   Class.extend = function(prop) {
     var _super = this.prototype;
@@ -47,7 +56,7 @@
         prop[name];
     }
 
-    // The dummy class constructor
+	// Dummy class constructor
     function Class() {
       // All construction is actually done in the init method
       if ( !initializing && this.init )
