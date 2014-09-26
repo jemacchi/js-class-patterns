@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc CDxD: Diagram: AbstractFactoryPattern</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+	<link type="text/css" rel="stylesheet" href="styles/joint.min.css">
+	
+	<!--<link type="text/css" rel="stylesheet" href="styles/UDStyle.css" media="screen" >
+	<script src="scripts/UDCore.js" type="text/javascript"></script>
+	<script src="scripts/UDModules.js" type="text/javascript"></script>-->
+	
+	<script src="scripts/raphael-min.js" type="text/javascript"></script>
+	<script src="scripts/underscore-min.js" type="text/javascript"></script>
+	<script src="scripts/sequence-diagram-min.js" type="text/javascript"></script>
+	<script src="scripts/joint-min.js" type="text/javascript"></script>
+	<script src="scripts/joint.shapes.uml.min.js" type="text/javascript"></script>
+	<script src="scripts/joint.layout.DirectedGraph.min.js" type="text/javascript"></script>
+	<script src="scripts/flowchart-1.3.2.min.js" type="text/javascript"></script>
+
+	<style>
+		.link-tools .tool-remove { display: none }
+		.link-tools .tool-options { display: none }
+	</style>
+	
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Diagram: AbstractFactoryPattern</h1>
+    
+    <section>
+    
+<header>
+    <h2></h2>
+</header>  
+
+<article>
+	<div>'An Abstract Factory creates objects that are related by a common theme. In object-oriented programming a Factory is an object that creates other objects. An Abstract Factory has abstracted out a theme which is shared by the newly created objects.<br><br>Suppose we have two Abstract Factories whose task it is to create page controls, such as, buttons, textboxes, radio buttons, and listboxes. One is the Light Factory which creates controls that are white and the other the Dark Factory which creates controls that are lack. Both Factories creates the same types of controls, but they differ in color, which is their common theme. This is an implementation of the Abstract Factory pattern.<br><br>Over time the Abstract Factory and Factory Method patterns have merged into a more general pattern called Factory. A Factory is simply an object that creates other objects.<br><br>You may be wondering why you would want to leave the responsibility of the construction of objects to others rather than simply calling a constructor function with the new keyword directly. The reason is that that constructor functions are limited in their control over the overall creation process and sometimes you will need to hand over control to a factory that has broader knowledge.<br><br>This includes scenarios in which the creation process involves object caching, sharing or re-using of objects, complex logic, or applications that maintain object and type counts, and objects that interact with different resources or devices. If your application needs more control over the object creation process, consider using a Factory.'</div>
+	<br/>
+	<div id="diagram" class="diagram"></div>
+ 
+	<script type="text/javascript">
+	    var x = new joint.dia.Graph;
+		window.onload = function(){
+			var graph = x;	
+			var paper = new joint.dia.Paper({
+				el: $('#diagram'),
+				width: '100%',
+				height: 600,
+				gridSize: 1,
+				model: graph
+			});	
+			var uml = joint.shapes.uml;	
+			
+			var entList = {};
+			var entities = JSON.parse('{"AbstractFactory":{"type":"abstract","position":{"x":263,"y":134},"size":{"width":240,"height":100},"name":"AbstractFactory"},"ConcreteFactory":{"type":"class","position":{"x":144,"y":22},"size":{"width":240,"height":100},"name":"ConcreteFactory"},"Employee":{"type":"class","position":{"x":233,"y":194},"size":{"width":240,"height":100},"name":"Employee"},"Vendor":{"type":"class","position":{"x":155,"y":87},"size":{"width":240,"height":100},"name":"Vendor"},"Product":{"type":"abstract","position":{"x":103,"y":12},"size":{"width":240,"height":100},"name":"Product"}}');			
+			for (var elem in entities) {
+				var el;
+				if (entities[elem].type == 'class') {
+					el = new uml.Class( { position: entities[elem].position,
+									 size: entities[elem].size,
+									 name: entities[elem].name });
+				} else if (entities[elem].type == 'abstract') {
+					el = new uml.Abstract( { position: entities[elem].position,
+									 size: entities[elem].size,
+									 name: entities[elem].name });
+				} else if (entities[elem].type == 'interface') {
+					el = new uml.Interface( { position: entities[elem].position,
+									 size: entities[elem].size,
+									 name: entities[elem].name });
+				}
+				entList[entities[elem].name] =  el;
+			};
+			_.each(entList, function(c) { graph.addCell(c); });
+
+			var relList = {};
+			var relations = JSON.parse('{"0":{"type":"generalization","source":"ConcreteFactory","target":"AbstractFactory"},"1":{"type":"association","source":"ConcreteFactory","target":"Employee"},"2":{"type":"association","source":"ConcreteFactory","target":"Vendor"},"3":{"type":"generalization","source":"Employee","target":"Product"},"4":{"type":"generalization","source":"Vendor","target":"Product"}}');			
+			for (var elem in relations) {
+				var el;
+				if (relations[elem].type == 'generalization') {
+					el = new uml.Generalization( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
+				} else if (relations[elem].type == 'implementation') {
+					el = new uml.Implementation( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
+				} else if (relations[elem].type == 'aggregation') {
+					el = new uml.Aggregation( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
+				} else if (relations[elem].type == 'composition') {
+					el = new uml.Composition( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
+				} else if (relations[elem].type == 'association') {
+					el = new uml.Association( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
+				};
+				var size = Object.keys(relList).length;
+				relList[size] =  el;
+			};			
+			
+			_.each(relList, function(r) { graph.addCell(r); });	
+			
+			joint.layout.DirectedGraph.layout(graph, { setLinkVertices: false });
+		}
+    </script>	
+
+</article>
+
+</section>  
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Modules</h3><ul><li><a href="module-core.html">core</a></li><li><a href="module-helpers.html">helpers</a></li><li><a href="module-patterns.html">patterns</a></li><li><a href="abstractFactory_.html">patters/creational/abstractFactory</a></li></ul><h3>Classes</h3><ul><li><a href="AbstractFactory.html">AbstractFactory</a></li><li><a href="ConcreteFactory.html">ConcreteFactory</a></li><li><a href="Employee.html">Employee</a></li><li><a href="LogHelper.html">LogHelper</a></li><li><a href="Class.html">Class</a></li><li><a href="PatternsRunner.html">PatternsRunner</a></li><li><a href="Product.html">Product</a></li><li><a href="Vendor.html">Vendor</a></li></ul><h3>Diagrams</h3><ul><li><a href="class-AbstractFactoryPattern.html">AbstractFactoryPattern</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<a href="https://github.com/jemacchi/cdxd">
+<img data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" style="position: absolute; top: 0; right: 0; border: 0;">
+</a>
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.0-dev</a> on Fri Sep 26 2014 14:43:33 GMT-0300 (ART)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
