@@ -1,4 +1,18 @@
 js-class-patterns
 =================
 
-Library of Classic OOP Patterns implemented in JS
+Library of Classic OOP Patterns implemented in JS.
+
+## Documentation
+
+We are using projet [CDxD] (https://github.com/jemacchi/cdxd/) to create JSDOC documentation for all patterns (including UML diagrams)
+
+## Roadmap/ToDo
+
+* Create more samples, with runner code and documentation (most relevant patterns)
+
+## Author
+
+[Jose Macchi](https://github.com/jemacchi)
+
+Documentation and examples based on http://www.dofactory.com/javascript/design-patterns.
