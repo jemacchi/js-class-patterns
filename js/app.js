@@ -11,10 +11,12 @@ define([
   function(LogHelper, PatternsRunner) {
 	
 	log = new LogHelper();
+	demosRunner = new PatternsRunner();
 	
     var init = function() {
-	  var aPatternsRunner = new PatternsRunner();
-	  aPatternsRunner.runAbstractFactoryDemo();
+	  //var aPatternsRunner = new PatternsRunner();
+	  //aPatternsRunner.runAbstractFactoryDemo();
+	  //aPatternsRunner.runBuilderDemo();
     };
 
     return {
