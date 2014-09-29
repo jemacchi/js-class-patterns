@@ -15,4 +15,4 @@ We are using projet [CDxD] (https://github.com/jemacchi/cdxd/) to create JSDOC d
 
 [Jose Macchi](https://github.com/jemacchi)
 
-Documentation and examples based on http://www.dofactory.com/javascript/design-patterns.
+Documentation and examples based on http://www.dofactory.com/javascript/design-patterns .
