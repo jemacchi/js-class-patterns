@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc CDxD: Diagram: AbstractFactoryPattern</title>
+    <title>JSDoc CDxD: Diagram: FactoryMethodPattern</title>
     
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -36,7 +36,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Diagram: AbstractFactoryPattern</h1>
+    <h1 class="page-title">Diagram: FactoryMethodPattern</h1>
     
     <section>
     
@@ -45,7 +45,7 @@
 </header>  
 
 <article>
-	<div>'An Abstract Factory creates objects that are related by a common theme. In object-oriented programming a Factory is an object that creates other objects. An Abstract Factory has abstracted out a theme which is shared by the newly created objects.<br><br>Suppose we have two Abstract Factories whose task it is to create page controls, such as, buttons, textboxes, radio buttons, and listboxes. One is the Light Factory which creates controls that are white and the other the Dark Factory which creates controls that are lack. Both Factories creates the same types of controls, but they differ in color, which is their common theme. This is an implementation of the Abstract Factory pattern.<br><br>Over time the Abstract Factory and Factory Method patterns have merged into a more general pattern called Factory. A Factory is simply an object that creates other objects.<br><br>You may be wondering why you would want to leave the responsibility of the construction of objects to others rather than simply calling a constructor function with the new keyword directly. The reason is that that constructor functions are limited in their control over the overall creation process and sometimes you will need to hand over control to a factory that has broader knowledge.<br><br>This includes scenarios in which the creation process involves object caching, sharing or re-using of objects, complex logic, or applications that maintain object and type counts, and objects that interact with different resources or devices. If your application needs more control over the object creation process, consider using a Factory.'</div>
+	<div>'A Factory Method creates new objects as instructed by the client. One way to create objects in JavaScript is by invoking a constructor function with the new operator. There are situations however, where the client does not, or should not, know which one of several candidate objects to instantiate. The Factory Method allows the client to delegate object creation while still retaining control over which type to instantiate.<br><br>The key objective of the Factory Method is extensibility. Factory Methods are frequently used in applications that manage, maintain, or manipulate collections of objects that are different but at the same time have many characteristics (i.e. methods and properties) in common. An example would be a collection of documents with a mix of Xml documents, Pdf documents, and Rtf documents.'</div>
 	<br/>
 	<div id="diagram" class="diagram"></div>
  
@@ -63,7 +63,7 @@
 			var uml = joint.shapes.uml;	
 			
 			var entList = {};
-			var entities = JSON.parse('{"AbstractFactory":{"type":"abstract","position":{"x":77,"y":136},"size":{"width":240,"height":100},"name":"AbstractFactory"},"ConcreteFactory":{"type":"class","position":{"x":223,"y":98},"size":{"width":240,"height":100},"name":"ConcreteFactory"},"Employee":{"type":"class","position":{"x":317,"y":75},"size":{"width":240,"height":100},"name":"Employee"},"Vendor":{"type":"class","position":{"x":19,"y":166},"size":{"width":240,"height":100},"name":"Vendor"},"Product":{"type":"abstract","position":{"x":328,"y":89},"size":{"width":240,"height":100},"name":"Product"}}');			
+			var entities = JSON.parse('{"Contractor":{"type":"class","position":{"x":111,"y":150},"size":{"width":240,"height":100},"name":"Contractor"},"Product":{"type":"interface","position":{"x":230,"y":47},"size":{"width":240,"height":100},"name":"Product"},"Factory":{"type":"class","position":{"x":319,"y":296},"size":{"width":240,"height":100},"name":"Factory"},"Fulltime":{"type":"class","position":{"x":201,"y":60},"size":{"width":240,"height":100},"name":"Fulltime"},"Parttime":{"type":"class","position":{"x":253,"y":275},"size":{"width":240,"height":100},"name":"Parttime"},"Temporary":{"type":"class","position":{"x":352,"y":171},"size":{"width":240,"height":100},"name":"Temporary"}}');			
 			for (var elem in entities) {
 				var el;
 				if (entities[elem].type == 'class') {
@@ -84,7 +84,7 @@
 			_.each(entList, function(c) { graph.addCell(c); });
 
 			var relList = {};
-			var relations = JSON.parse('{"0":{"type":"generalization","source":"ConcreteFactory","target":"AbstractFactory"},"1":{"type":"association","source":"ConcreteFactory","target":"Employee"},"2":{"type":"association","source":"ConcreteFactory","target":"Vendor"},"3":{"type":"generalization","source":"Employee","target":"Product"},"4":{"type":"generalization","source":"Vendor","target":"Product"}}');			
+			var relations = JSON.parse('{"0":{"type":"implementation","source":"Contractor","target":"Product"},"1":{"type":"association","source":"Factory","target":"Fulltime"},"2":{"type":"association","source":"Factory","target":"Parttime"},"3":{"type":"association","source":"Factory","target":"Temporary"},"4":{"type":"association","source":"Factory","target":"Contractor"},"5":{"type":"implementation","source":"Fulltime","target":"Product"},"6":{"type":"implementation","source":"Parttime","target":"Product"},"7":{"type":"implementation","source":"Temporary","target":"Product"}}');			
 			for (var elem in relations) {
 				var el;
 				if (relations[elem].type == 'generalization') {
