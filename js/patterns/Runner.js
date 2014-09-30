@@ -6,6 +6,7 @@ define([
 	'patterns/creational/builder/shop',
 	'patterns/creational/builder/carBuilder',
 	'patterns/creational/builder/truckBuilder',
+	'patterns/creational/factorymethod/factory',
   ],
   /**
    * Patterns examples runner
@@ -13,7 +14,7 @@ define([
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
-  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder) {
+  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory) {
     'use strict';
    /**
     * Patterns examples runner
@@ -51,8 +52,20 @@ define([
 			 
 			log.show();
 		},
-		
-		
+		runFactoryMethodDemo: function () { 	
+			var employees = [];
+			var factory = new Factory();
+			 
+			employees.push(factory.createEmployee("fulltime"));
+			employees.push(factory.createEmployee("parttime"));
+			employees.push(factory.createEmployee("temporary"));
+			employees.push(factory.createEmployee("contractor"));
+			for (var i = 0, len = employees.length; i < len; i++) {
+				employees[i].say();
+			}
+			 
+			log.show();
+		},
     });
 
     return PatternsRunner;
