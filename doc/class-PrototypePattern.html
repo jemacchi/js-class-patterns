@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc CDxD: Module: patterns</title>
+    <title>JSDoc CDxD: Diagram: PrototypePattern</title>
     
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -36,102 +36,81 @@
 
 <div id="main">
     
-    <h1 class="page-title">Module: patterns</h1>
+    <h1 class="page-title">Diagram: PrototypePattern</h1>
     
-    
-
-
-
-<section>
+    <section>
     
 <header>
-    <h2>
-    patterns
-    </h2>
-    
+    <h2></h2>
 </header>  
 
 <article>
-    <div class="container-overview">
-    
-    
-    
-        
-            <div class="description">Patterns examples runner</div>
-        
-        
-        
-<dl class="details">
-    
-        
-    
-    <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>1.0</li></ul></dd>
-    
-    
-    
+	<div>'The Prototype Pattern creates new objects, but rather than creating non-initialized objects it returns objects that are initialized with values it copied from a prototype - or sample - object. The Prototype pattern is also referred to as the Properties pattern.<br><br>An example of where the Prototype pattern is useful is the initialization of business objects with values that match the default values in the database. The prototype object holds the default values that are copied over into a newly created business object.<br><br>Classical languages rarely use the Prototype pattern, but JavaScript being a prototypal language uses this pattern in the construction of new objects and their prototypes.'</div>
+	<br/>
+	<div id="diagram" class="diagram"></div>
+ 
+	<script type="text/javascript">
+	    var x = new joint.dia.Graph;
+		window.onload = function(){
+			var graph = x;	
+			var paper = new joint.dia.Paper({
+				el: $('#diagram'),
+				width: '100%',
+				height: 600,
+				gridSize: 1,
+				model: graph
+			});	
+			var uml = joint.shapes.uml;	
+			
+			var entList = {};
+			var entities = JSON.parse('{"Customer":{"type":"class","position":{"x":228,"y":87},"size":{"width":240,"height":100},"name":"Customer"},"CustomerPrototype":{"type":"class","position":{"x":183,"y":132},"size":{"width":240,"height":100},"name":"CustomerPrototype"}}');			
+			for (var elem in entities) {
+				var el;
+				if (entities[elem].type == 'class') {
+					el = new uml.Class( { position: entities[elem].position,
+									 size: entities[elem].size,
+									 name: entities[elem].name });
+				} else if (entities[elem].type == 'abstract') {
+					el = new uml.Abstract( { position: entities[elem].position,
+									 size: entities[elem].size,
+									 name: entities[elem].name });
+				} else if (entities[elem].type == 'interface') {
+					el = new uml.Interface( { position: entities[elem].position,
+									 size: entities[elem].size,
+									 name: entities[elem].name });
+				}
+				entList[entities[elem].name] =  el;
+			};
+			_.each(entList, function(c) { graph.addCell(c); });
 
-    
-    
-    
-    
-    
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
-        <ul>
-            <li><a href="mailto:jemacchi@yahoo.com.ar">Jose Macchi</a></li>
-        </ul>
-    </dd>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        patterns/Runner.js, line 19
-    </li></ul></dd>
-    
-    
-    
-    
-    
-    
-    
-</dl>
+			var relList = {};
+			var relations = JSON.parse('{"0":{"type":"association","source":"CustomerPrototype","target":"Customer"}}');			
+			for (var elem in relations) {
+				var el;
+				if (relations[elem].type == 'generalization') {
+					el = new uml.Generalization( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
+				} else if (relations[elem].type == 'implementation') {
+					el = new uml.Implementation( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
+				} else if (relations[elem].type == 'aggregation') {
+					el = new uml.Aggregation( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
+				} else if (relations[elem].type == 'composition') {
+					el = new uml.Composition( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
+				} else if (relations[elem].type == 'association') {
+					el = new uml.Association( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
+				};
+				var size = Object.keys(relList).length;
+				relList[size] =  el;
+			};			
+			
+			_.each(relList, function(r) { graph.addCell(r); });	
+			
+			joint.layout.DirectedGraph.layout(graph, { setLinkVertices: false });
+		}
+    </script>	
 
-        
-        
-    
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 </article>
 
 </section>  
-
-
-
 
 </div>
 
