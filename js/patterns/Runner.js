@@ -4,9 +4,11 @@ define([
 	'patterns/creational/abstractfactory/employee',
 	'patterns/creational/abstractfactory/concretefactory',
 	'patterns/creational/builder/shop',
-	'patterns/creational/builder/carBuilder',
-	'patterns/creational/builder/truckBuilder',
+	'patterns/creational/builder/carbuilder',
+	'patterns/creational/builder/truckbuilder',
 	'patterns/creational/factorymethod/factory',
+	'patterns/creational/prototype/customer',	
+	'patterns/creational/prototype/customerprototype',	
   ],
   /**
    * Patterns examples runner
@@ -14,7 +16,7 @@ define([
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
-  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory) {
+  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory, Customer, CustomerPrototype) {
     'use strict';
    /**
     * Patterns examples runner
@@ -66,6 +68,15 @@ define([
 			 
 			log.show();
 		},
+		runPrototypeDemo: function() {
+			var proto = new Customer();
+			proto.init("n/a", "n/a", "pending");
+			var prototype = new CustomerPrototype();
+			prototype.init(proto);			
+			 
+			var customer = prototype.clone();
+			customer.say();		
+		},		
     });
 
     return PatternsRunner;
