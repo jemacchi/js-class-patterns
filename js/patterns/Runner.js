@@ -9,6 +9,7 @@ define([
 	'patterns/creational/factorymethod/factory',
 	'patterns/creational/prototype/customer',	
 	'patterns/creational/prototype/customerprototype',	
+	'patterns/creational/singleton/singleton',	
   ],
   /**
    * Patterns examples runner
@@ -16,7 +17,7 @@ define([
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
-  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory, Customer, CustomerPrototype) {
+  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory, Customer, CustomerPrototype, Singleton) {
     'use strict';
    /**
     * Patterns examples runner
@@ -76,7 +77,14 @@ define([
 			 
 			var customer = prototype.clone();
 			customer.say();		
-		},		
+		},	
+		runSingletonDemo: function() {
+		    var singleton = new Singleton();
+			var instance1 = singleton.getInstance();
+			var instance2 = singleton.getInstance();
+			 
+			alert("Same instance? " + (instance1 === instance2));
+		},
     });
 
     return PatternsRunner;
