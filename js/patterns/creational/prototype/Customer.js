@@ -34,7 +34,7 @@ define([
 		* Shows details on customer
 		*/		
 		say: function () {
-			alert("name: " + this.first + " " + this.last + ", status: " + this.status);
+			log.add("name: " + this.first + " " + this.last + ", status: " + this.status);
 		},	
     });
     return Customer;
