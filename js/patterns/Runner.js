@@ -9,7 +9,9 @@ define([
 	'patterns/creational/factorymethod/factory',
 	'patterns/creational/prototype/customer',	
 	'patterns/creational/prototype/customerprototype',	
-	'patterns/creational/singleton/singleton',	
+	'patterns/creational/singleton/singleton',
+	/*'patterns/creational/singleton/shipping',
+	'patterns/creational/singleton/shippingAdapter',*/
   ],
   /**
    * Patterns examples runner
@@ -17,7 +19,7 @@ define([
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
-  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory, Customer, CustomerPrototype, Singleton) {
+  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory, Customer, CustomerPrototype, Singleton/*, Shipping, ShippingAdapter*/) {
     'use strict';
    /**
     * Patterns examples runner
@@ -76,14 +78,32 @@ define([
 			prototype.init(proto);			
 			 
 			var customer = prototype.clone();
-			customer.say();		
+			customer.say();	
+			log.show();
 		},	
 		runSingletonDemo: function() {
 		    var singleton = new Singleton();
 			var instance1 = singleton.getInstance();
 			var instance2 = singleton.getInstance();
 			 
-			alert("Same instance? " + (instance1 === instance2));
+			log.add("Same instance? " + (instance1 === instance2));
+			log.show();
+		},
+		runAdapterDemo: function() {
+			/*var shipping = new Shipping();
+			var credentials = {token: "30a8-6ee1"};
+			var adapter = new ShippingAdapter(credentials);
+			 
+			// original shipping object and interface		 
+			var cost = shipping.request("78701", "10010", "2 lbs");
+			log.add("Old cost: " + cost);
+			 
+			// new shipping object with adapted interface
+			cost = adapter.request("78701", "10010", "2 lbs");
+			 
+			log.add("New cost: " + cost);*/
+			log.add("Under development");
+			log.show();		
 		},
     });
 
