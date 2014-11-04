@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc CDxD: Diagram: FactoryMethodPattern</title>
+    <title>JSDoc CDxD: Module: patters/creational/prototype</title>
     
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -36,81 +36,215 @@
 
 <div id="main">
     
-    <h1 class="page-title">Diagram: FactoryMethodPattern</h1>
+    <h1 class="page-title">Module: patters/creational/prototype</h1>
     
-    <section>
+    
+
+
+
+<section>
     
 <header>
-    <h2></h2>
+    <h2>
+    patters/creational/prototype
+    </h2>
+    
 </header>  
 
 <article>
-	<div>'A Factory Method creates new objects as instructed by the client. One way to create objects in JavaScript is by invoking a constructor function with the new operator. There are situations however, where the client does not, or should not, know which one of several candidate objects to instantiate. The Factory Method allows the client to delegate object creation while still retaining control over which type to instantiate.<br><br>The key objective of the Factory Method is extensibility. Factory Methods are frequently used in applications that manage, maintain, or manipulate collections of objects that are different but at the same time have many characteristics (i.e. methods and properties) in common. An example would be a collection of documents with a mix of Xml documents, Pdf documents, and Rtf documents.'</div>
-	<br/>
-	<div id="diagram" class="diagram"></div>
- 
-	<script type="text/javascript">
-	    var x = new joint.dia.Graph;
-		window.onload = function(){
-			var graph = x;	
-			var paper = new joint.dia.Paper({
-				el: $('#diagram'),
-				width: '100%',
-				height: 600,
-				gridSize: 1,
-				model: graph
-			});	
-			var uml = joint.shapes.uml;	
-			
-			var entList = {};
-			var entities = JSON.parse('{"Contractor":{"type":"class","position":{"x":128,"y":71},"size":{"width":240,"height":100},"name":"Contractor"},"Product":{"type":"interface","position":{"x":255,"y":59},"size":{"width":240,"height":100},"name":"Product"},"Factory":{"type":"class","position":{"x":94,"y":10},"size":{"width":240,"height":100},"name":"Factory"},"Fulltime":{"type":"class","position":{"x":126,"y":43},"size":{"width":240,"height":100},"name":"Fulltime"},"Parttime":{"type":"class","position":{"x":87,"y":203},"size":{"width":240,"height":100},"name":"Parttime"},"Temporary":{"type":"class","position":{"x":339,"y":190},"size":{"width":240,"height":100},"name":"Temporary"}}');			
-			for (var elem in entities) {
-				var el;
-				if (entities[elem].type == 'class') {
-					el = new uml.Class( { position: entities[elem].position,
-									 size: entities[elem].size,
-									 name: entities[elem].name });
-				} else if (entities[elem].type == 'abstract') {
-					el = new uml.Abstract( { position: entities[elem].position,
-									 size: entities[elem].size,
-									 name: entities[elem].name });
-				} else if (entities[elem].type == 'interface') {
-					el = new uml.Interface( { position: entities[elem].position,
-									 size: entities[elem].size,
-									 name: entities[elem].name });
-				}
-				entList[entities[elem].name] =  el;
-			};
-			_.each(entList, function(c) { graph.addCell(c); });
+    <div class="container-overview">
+    
+    
+    
+        
+            <div class="description">Customer class (to be cloned)</div>
+        
+        
+        
+<dl class="details">
+    
+        
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>1.0</li></ul></dd>
+    
+    
+    
 
-			var relList = {};
-			var relations = JSON.parse('{"0":{"type":"implementation","source":"Contractor","target":"Product"},"1":{"type":"association","source":"Factory","target":"Fulltime"},"2":{"type":"association","source":"Factory","target":"Parttime"},"3":{"type":"association","source":"Factory","target":"Temporary"},"4":{"type":"association","source":"Factory","target":"Contractor"},"5":{"type":"implementation","source":"Fulltime","target":"Product"},"6":{"type":"implementation","source":"Parttime","target":"Product"},"7":{"type":"implementation","source":"Temporary","target":"Product"}}');			
-			for (var elem in relations) {
-				var el;
-				if (relations[elem].type == 'generalization') {
-					el = new uml.Generalization( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
-				} else if (relations[elem].type == 'implementation') {
-					el = new uml.Implementation( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
-				} else if (relations[elem].type == 'aggregation') {
-					el = new uml.Aggregation( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
-				} else if (relations[elem].type == 'composition') {
-					el = new uml.Composition( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
-				} else if (relations[elem].type == 'association') {
-					el = new uml.Association( { source: { id: entList[relations[elem].source].id }, target: { id: entList[relations[elem].target].id }});
-				};
-				var size = Object.keys(relList).length;
-				relList[size] =  el;
-			};			
-			
-			_.each(relList, function(r) { graph.addCell(r); });	
-			
-			joint.layout.DirectedGraph.layout(graph, { setLinkVertices: false });
-		}
-    </script>	
+    
+    
+    
+    
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li><a href="mailto:jemacchi@yahoo.com.ar">Jose Macchi</a></li>
+        </ul>
+    </dd>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        patterns/creational/prototype/Customer.js, line 10
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
 
+        
+        
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Classes</h3>
+        
+        <dl>
+            <dt><a href="module-patters_creational_prototype-Customer.html">Customer</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-patters_creational_prototype-CustomerPrototype.html">CustomerPrototype</a></dt>
+            <dd></dd>
+        </dl>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </article>
 
 </section>  
+
+
+
+
+
+
+<section>
+    
+<header>
+    <h2>
+    patters/creational/prototype
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+            <div class="description">CustomerPrototype class</div>
+        
+        
+        
+<dl class="details">
+    
+        
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>1.0</li></ul></dd>
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li><a href="mailto:jemacchi@yahoo.com.ar">Jose Macchi</a></li>
+        </ul>
+    </dd>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        patterns/creational/prototype/CustomerPrototype.js, line 11
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+        
+        
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Classes</h3>
+        
+        <dl>
+            <dt><a href="module-patters_creational_prototype-Customer.html">Customer</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-patters_creational_prototype-CustomerPrototype.html">CustomerPrototype</a></dt>
+            <dd></dd>
+        </dl>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
 
 </div>
 
@@ -125,7 +259,7 @@
 </a>
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-dev</a> on Tue Nov 04 2014 17:08:24 GMT-0300 (ART)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-dev</a> on Tue Nov 04 2014 17:08:25 GMT-0300 (ART)
 </footer>
 
 <script> prettyPrint(); </script>

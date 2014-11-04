@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc CDxD: Diagram: FactoryMethodPattern</title>
+    <title>JSDoc CDxD: Diagram: AdapterPattern</title>
     
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -36,7 +36,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Diagram: FactoryMethodPattern</h1>
+    <h1 class="page-title">Diagram: AdapterPattern</h1>
     
     <section>
     
@@ -45,7 +45,7 @@
 </header>  
 
 <article>
-	<div>'A Factory Method creates new objects as instructed by the client. One way to create objects in JavaScript is by invoking a constructor function with the new operator. There are situations however, where the client does not, or should not, know which one of several candidate objects to instantiate. The Factory Method allows the client to delegate object creation while still retaining control over which type to instantiate.<br><br>The key objective of the Factory Method is extensibility. Factory Methods are frequently used in applications that manage, maintain, or manipulate collections of objects that are different but at the same time have many characteristics (i.e. methods and properties) in common. An example would be a collection of documents with a mix of Xml documents, Pdf documents, and Rtf documents.'</div>
+	<div></div>
 	<br/>
 	<div id="diagram" class="diagram"></div>
  
@@ -63,7 +63,7 @@
 			var uml = joint.shapes.uml;	
 			
 			var entList = {};
-			var entities = JSON.parse('{"Contractor":{"type":"class","position":{"x":128,"y":71},"size":{"width":240,"height":100},"name":"Contractor"},"Product":{"type":"interface","position":{"x":255,"y":59},"size":{"width":240,"height":100},"name":"Product"},"Factory":{"type":"class","position":{"x":94,"y":10},"size":{"width":240,"height":100},"name":"Factory"},"Fulltime":{"type":"class","position":{"x":126,"y":43},"size":{"width":240,"height":100},"name":"Fulltime"},"Parttime":{"type":"class","position":{"x":87,"y":203},"size":{"width":240,"height":100},"name":"Parttime"},"Temporary":{"type":"class","position":{"x":339,"y":190},"size":{"width":240,"height":100},"name":"Temporary"}}');			
+			var entities = JSON.parse('{"Adaptee":{"type":"abstract","position":{"x":15,"y":248},"size":{"width":240,"height":100},"name":"Adaptee"},"Adapter":{"type":"abstract","position":{"x":128,"y":275},"size":{"width":240,"height":100},"name":"Adapter"},"AdvancedShipping":{"type":"class","position":{"x":132,"y":2},"size":{"width":240,"height":100},"name":"AdvancedShipping"},"Shipping":{"type":"class","position":{"x":119,"y":157},"size":{"width":240,"height":100},"name":"Shipping"}}');			
 			for (var elem in entities) {
 				var el;
 				if (entities[elem].type == 'class') {
@@ -84,7 +84,7 @@
 			_.each(entList, function(c) { graph.addCell(c); });
 
 			var relList = {};
-			var relations = JSON.parse('{"0":{"type":"implementation","source":"Contractor","target":"Product"},"1":{"type":"association","source":"Factory","target":"Fulltime"},"2":{"type":"association","source":"Factory","target":"Parttime"},"3":{"type":"association","source":"Factory","target":"Temporary"},"4":{"type":"association","source":"Factory","target":"Contractor"},"5":{"type":"implementation","source":"Fulltime","target":"Product"},"6":{"type":"implementation","source":"Parttime","target":"Product"},"7":{"type":"implementation","source":"Temporary","target":"Product"}}');			
+			var relations = JSON.parse('{}');			
 			for (var elem in relations) {
 				var el;
 				if (relations[elem].type == 'generalization') {
