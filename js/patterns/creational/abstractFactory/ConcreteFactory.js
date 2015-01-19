@@ -15,8 +15,8 @@ define([
     * Concrete Factory
     * @version 1.0
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
-	* @class ConcreteFactory
-	* @cdxd.class AbstractFactoryPattern
+	  * @class ConcreteFactory
+	  * @cdxd.class AbstractFactoryPattern
     * @cdxd.inherits AbstractFactoryPattern AbstractFactory abstract
     * @cdxd.associatedWith AbstractFactoryPattern Employee	
     * @cdxd.associatedWith AbstractFactoryPattern Vendor	

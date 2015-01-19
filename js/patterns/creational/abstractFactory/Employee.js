@@ -13,8 +13,8 @@ define([
     * Employee product class
     * @version 1.0
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
-	* @class Employee
-	* @cdxd.class AbstractFactoryPattern
+	  * @class Employee
+	  * @cdxd.class AbstractFactoryPattern
     * @cdxd.inherits AbstractFactoryPattern Product
     */	
     var Employee = Product.extend(

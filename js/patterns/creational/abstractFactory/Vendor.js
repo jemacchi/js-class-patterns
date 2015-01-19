@@ -13,7 +13,7 @@ define([
     * Vendor product class
     * @version 1.0
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
-	* @class Vendor
+	  * @class Vendor
     * @cdxd.inherits AbstractFactoryPattern Product abstract
     */	
     var Vendor = Product.extend(
