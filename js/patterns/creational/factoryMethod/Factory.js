@@ -1,9 +1,9 @@
 define([
     'class',
-	'./fulltime',
-	'./parttime',
-	'./temporary',
-	'./contractor',
+	'./Fulltime',
+	'./Parttime',
+	'./Temporary',
+	'./Contractor',
   ],
   /**
    * Factory Method class

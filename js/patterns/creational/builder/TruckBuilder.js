@@ -1,6 +1,6 @@
 define([
-    './abstractbuilder',
-	'./truck',
+    './AbstractBuilder',
+	'./Truck',
   ],
   /**
    * Truck builder class

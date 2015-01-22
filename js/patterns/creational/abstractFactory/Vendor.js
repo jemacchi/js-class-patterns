@@ -1,5 +1,5 @@
 define([
-	'./product',
+	'./Product',
   ],
   /**
    * Vendor product class

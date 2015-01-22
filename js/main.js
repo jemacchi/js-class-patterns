@@ -12,11 +12,7 @@ require.config({
     }
   }
 });
-
-require([
-    'require.config',
-    'app'
-  ],
+require(['require.config','app'],
   function(config, app) {
     app.init();
   }

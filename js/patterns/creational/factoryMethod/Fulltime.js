@@ -1,5 +1,5 @@
 define([
-    './product',
+    './Product',
   ],
   /**
    * Fulltime employee type

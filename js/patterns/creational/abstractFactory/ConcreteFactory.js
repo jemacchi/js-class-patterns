@@ -1,7 +1,7 @@
 define([
-    './abstractfactory',
-	'./employee',
-	'./vendor',
+    './AbstractFactory',
+	'./Employee',
+	'./Vendor',
   ],
   /**
    * Concrete Factory

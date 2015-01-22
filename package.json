@@ -1,0 +1,45 @@
+{
+  "name": "js-class-patterns",
+  "version": "0.1.1",
+  "description": "Library of Classic OOP Patterns implemented in JS",
+  "homepage": "https://github.com/jemacchi/js-class-patterns",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jemacchi/js-class-patterns.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jemacchi/js-class-patterns/issues"
+  },
+  "licenses": [
+    {
+      "type": "GPL2",
+      "url": "https://github.com/jemacchi/js-class-patterns/blob/master/LICENSE"
+    }
+  ],
+  "keywords": [
+    "karma-plugin"
+  ],
+  "engines": {
+        "node": ">=0.8.0"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "underscore": "~1.5.2",
+    "requirejs": "~2.1.4",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-uglify": "*",
+    "karma-mocha": "*",
+    "karma-requirejs": "*",
+    "grunt-karma": "*",
+	  "karma-chrome-launcher": "*",
+	  "karma-coverage": "*",
+	  "karma-junit-reporter": "*",
+	  "karma-e2e-dsl": "~0.1.0",
+    "grunt": "~0.4.1"
+  },
+  "author": "Jose Macchi"
+}

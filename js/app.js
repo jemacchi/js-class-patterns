@@ -6,7 +6,7 @@
  */
 define([
 	'helpers/loghelper',
-	'patterns/runner',
+	'patterns/Runner',
   ],
   function(LogHelper, PatternsRunner) {
 	

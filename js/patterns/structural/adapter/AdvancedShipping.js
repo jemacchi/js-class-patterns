@@ -1,6 +1,6 @@
 define([
 	'class',
-	'./adaptee'
+	'./Adaptee'
   ],
   /**
    * Shipping class

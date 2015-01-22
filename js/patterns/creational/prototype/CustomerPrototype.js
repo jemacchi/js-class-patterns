@@ -1,6 +1,6 @@
 define([
 	'class',
-	'./customer',
+	'./Customer',
   ],
   /**
    * CustomerPrototype class
