@@ -29,6 +29,7 @@
   "devDependencies": {
     "underscore": "~1.5.2",
     "requirejs": "~2.1.4",
+    "chai": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-connect": "*",
     "grunt-contrib-uglify": "*",

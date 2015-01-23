@@ -35,7 +35,9 @@ module.exports = function(config) {
 	
     preprocessors: { 
 		//'./test/e2eSpec.js': ['coverage'] ,
-	  './test/abstractFactorySpec.js': ['coverage'] ,		
+    'js/core/*.js' : ['coverage'] ,
+    'js/helpers/*.js' : ['coverage'] ,
+    'js/patterns/creational/abstractFactory/*.js' : ['coverage'] ,
 	},
 	
 	// optionally, configure the reporter

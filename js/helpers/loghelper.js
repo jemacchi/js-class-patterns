@@ -27,7 +27,11 @@ define([
 	   /**
 		* Show stack of messages
 		*/		
-		show: function () { alert(this.log); this.log = ""; }
+		show: function () { alert(this.log); this.log = ""; },
+    /**
+    * Return stack of messages
+    */    
+    get: function () { return this.log; }
     });
 
     return LogHelper;

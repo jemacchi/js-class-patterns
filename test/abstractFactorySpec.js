@@ -1,18 +1,31 @@
-define(['app', 'jquery', 'underscore'], function(App, $, _) {
+define(['jquery', 
+	    'underscore', 
+	    'chai',
+	    'helpers/loghelper',
+	    'patterns/creational/abstractFactory/Vendor',
+	    'patterns/creational/abstractFactory/Employee',
+	    'patterns/creational/abstractFactory/ConcreteFactory'],
+	     function($, _, chai, LogHelper,Vendor, Employee, ConcreteFactory) {
 
-    describe('just checking', function() {
+    describe('Abstract factory pattern tests', function() {
 
-        it('works for app', function() {
-            var el = $('<div></div>');
+    	var assert = chai.assert;
+    	log = new LogHelper();
 
-            app.init();
+        it('test 001', function() {
+            var persons = [];
+			var concreteFactory = new ConcreteFactory();
+		 
+			persons.push(concreteFactory.create(Employee,"Joan DiSilva"));
+		/*	persons.push(concreteFactory.create(Employee,"Tim O'Neill"));
+			persons.push(concreteFactory.create(Vendor,"Gerald Watson"));
+			persons.push(concreteFactory.create(Vendor,"Nicole McNight"));
+		*/	 
+			for (var i = 0, len = persons.length; i < len; i++) {
+				persons[i].say();
+			}
 
-            expect(el.text()).toEqual('require.js up and running');
-        });
-
-        it('works for underscore', function() {
-            // just checking that _ works
-            expect(_.size([1,2,3])).toEqual(3);
+			assert(log.get()=='I am employee Joan DiSilva\n','Test passed !!!');
         });
 
     });

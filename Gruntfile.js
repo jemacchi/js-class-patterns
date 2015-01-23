@@ -22,7 +22,7 @@ module.exports = function(grunt) {
     karma: {
       e2e: {
         configFile: 'karma.conf.js',
-        singleRun: false
+        singleRun: true
       }
     },
     uglify: {
