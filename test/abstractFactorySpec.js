@@ -17,15 +17,13 @@ define(['jquery',
 			var concreteFactory = new ConcreteFactory();
 		 
 			persons.push(concreteFactory.create(Employee,"Joan DiSilva"));
-		/*	persons.push(concreteFactory.create(Employee,"Tim O'Neill"));
 			persons.push(concreteFactory.create(Vendor,"Gerald Watson"));
-			persons.push(concreteFactory.create(Vendor,"Nicole McNight"));
-		*/	 
+		
 			for (var i = 0, len = persons.length; i < len; i++) {
 				persons[i].say();
 			}
 
-			assert(log.get()=='I am employee Joan DiSilva\n','Test passed !!!');
+			assert(log.get()=='I am employee Joan DiSilva\n'+'I am vendor Gerald Watson\n','Test passed !!!');
         });
 
     });

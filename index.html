@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <script type="text/javascript" data-main="js/main" src="./lib/require.js"></script>
-	  <style>
-		body {
-			font: 14px/130% "DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans serif;
-		} 
-	  </style>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap -->
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" data-main="js/main" src="./lib/require.js"></script>
+	  	<style>
+			body {
+				font: 14px/130% "DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans serif;
+			} 
+	  	</style>
 	</head>
 	<body>
 		<h1>JavaScript Design Patterns</h1>
@@ -172,6 +177,29 @@
 				<td style="width:10%;border:0;"><button type="button" onclick="">Run</button></td>
 				<td style="width:10%;border:0;"><a href="./js/patterns/behavioral/">See code...</a></td>				
 			</tr>
-		</tbody></table>
+		</tbody>
+	</table>
+
+	<div class="modal fade"  id="logModal">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Log</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>One fine body&hellip;</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./lib/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./lib/bootstrap.min.js"></script>
 	</body>
 </html>

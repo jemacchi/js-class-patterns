@@ -6,7 +6,7 @@ describe('karma e2e dsl', function () {
     browser.navigateTo('/index.html');
   }));
 
-  describe('calculation', function () {
+  describe('Abstract factory pattern e2e test', function () {
 
     var selector = '[name="textbox"]';
 	

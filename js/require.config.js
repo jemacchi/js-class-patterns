@@ -6,6 +6,7 @@ define(function () {
     require.config({
         paths: {
             'class': 'core/class.inheritance',
+            'jquery': '../lib/jquery.min',
         },
         shim: {
             'class': {

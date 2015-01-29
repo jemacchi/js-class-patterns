@@ -1,5 +1,6 @@
 define([
     'class',
+    'jquery'
   ],
   /**
    * Log helper
@@ -7,7 +8,7 @@ define([
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
-  function(Inheritance) {
+  function(Inheritance, $) {
     'use strict';
    /**
     * Log helper
@@ -23,11 +24,16 @@ define([
 	   /**
 		* Add messages to log
 		*/
-		add: function (msg) { this.log += msg + "\n"; },
+		add: function (msg) { this.log += msg + "<br>"; },
 	   /**
 		* Show stack of messages
 		*/		
-		show: function () { alert(this.log); this.log = ""; },
+		show: function () { 
+      var dialog = $('#logModal');
+      dialog.find('.modal-body').text(this.log);
+      dialog.modal('show');
+      this.log = "";
+    },
     /**
     * Return stack of messages
     */    
