@@ -1,25 +1,36 @@
-describe('karma e2e dsl', function () {
 
-  this.timeout(15000);
+define(['jquery', 
+      'underscore', 
+      'chai',
+      'karma',
+      'helpers/loghelper',
+      'patterns/creational/abstractFactory/Vendor',
+      'patterns/creational/abstractFactory/Employee',
+      'patterns/creational/abstractFactory/ConcreteFactory'],
+       function($, _, chai, karma, LogHelper,Vendor, Employee, ConcreteFactory) {
 
-  beforeEach(dsl(function () {
-    browser.navigateTo('/index.html');
-  }));
+    describe('Abstract factory pattern e2e tests', function () {
 
-  describe('Abstract factory pattern e2e test', function () {
+      this.timeout(15000);
 
-    var selector = '[name="textbox"]';
-	
-    it('could calculate sqrt', dsl(function () {
-      input(selector).enter('16');
-	    input('#sqrt-btn').click();
-      element('body').text(function (text) {
-        text.should.contain('4');
+      beforeEach(karma.dsl(function () {
+        browser.navigateTo('/index.html');
+      }));
+
+      describe('test 001', function () {
+
+        var selector = '[name="textbox"]';
+      
+        it('could calculate sqrt', dsl(function () {
+          input(selector).enter('16');
+          input('#sqrt-btn').click();
+          element('body').text(function (text) {
+            text.should.contain('4');
+          });
+        }));
+
       });
-    }));
 
-  });
+    });
 
 });
-
-
