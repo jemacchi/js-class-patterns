@@ -23,7 +23,7 @@ define(['jquery',
 				persons[i].say();
 			}
 
-			assert(log.get()=='I am employee Joan DiSilva\n'+'I am vendor Gerald Watson\n','Test passed !!!');
+			assert(log.get()=='I am employee Joan DiSilva<br/>'+'I am vendor Gerald Watson<br/>','Test passed !!!');
         });
 
     });

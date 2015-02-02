@@ -15,8 +15,7 @@ require.config({
         'jquery': '../lib/jquery.min',
         'underscore': '../lib/underscore.min',
         'class': 'core/class.inheritance',
-        'chai': '../lib/chai',
-        'karma': '../lib/karma-e2e-dsl'
+        'chai': '../lib/chai'
     },
 
     shim: {
