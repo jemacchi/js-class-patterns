@@ -13,6 +13,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      './lib/underscore.min.js',
+      './lib/jquery.min.js',
+      './lib/should.js',
+      './lib/karma-e2e-dsl.js',
       {pattern: 'lib/**/*.js', included: false},
       {pattern: 'js/**/*.js', included: false},
       {pattern: 'test/**/*Spec.js', included: false},

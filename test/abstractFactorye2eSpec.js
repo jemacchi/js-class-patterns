@@ -1,38 +1,20 @@
+describe('Abstract factory pattern e2e tests', function () {
+ 
+  this.timeout(10000);
 
-define(['jquery', 
-      'underscore', 
-      'chai',
-      'helpers/loghelper',
-      'patterns/creational/abstractFactory/Vendor',
-      'patterns/creational/abstractFactory/Employee',
-      'patterns/creational/abstractFactory/ConcreteFactory'],
-       function($, _, chai, LogHelper,Vendor, Employee, ConcreteFactory) {
+  beforeEach(dsl(function () {
+    browser.navigateTo('/app/index.html');
+  }));
 
-    describe('Abstract factory pattern e2e tests', function () {
-
-      this.timeout(15000);
-      var assert = chai.assert;
-
-      /*beforeEach(dsl(function () {
-        browser.navigateTo('/index.html');
-      }));*/
-
-      describe('test 001', function () {
-
-       /* var selector = '[name="textbox"]';
+  //var assert = chai.assert;   
       
-        it('could calculate sqrt', dsl(function () {
-          input(selector).enter('16');
-          input('#sqrt-btn').click();
-          element('body').text(function (text) {
-            text.should.contain('4');
-          });
-        }));
-        */
-
-        assert('Pending'=='Pending','Test passed !!!');
+  describe('#reload', function () {
+    it('could reload current page', dsl(function () {
+      browser.reload();
+      browser.window.path(function (path) {
+        path.should.equal('/app/index.html');
       });
-
-    });
+    }));
+  });
 
 });
