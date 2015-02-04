@@ -8,19 +8,20 @@ module.exports = function(config) {
 
 
     // frameworks to use
-    frameworks: ['mocha','requirejs'],
+    frameworks: ['mocha'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      './lib/underscore.min.js',
-      './lib/jquery.min.js',
-      './lib/should.js',
-      './lib/karma-e2e-dsl.js',
-      {pattern: 'lib/**/*.js', included: false},
-      {pattern: 'js/**/*.js', included: false},
-      {pattern: 'test/**/*Spec.js', included: false},
-      'test/test-main.js'
+     // './lib/underscore.min.js',
+     // './lib/jquery.min.js',
+      './lib/chai.js',
+     // './lib/karma-e2e-dsl.js',*/
+      //{pattern: 'lib/**/*.js', included: false},
+      //{pattern: 'js/**/*.js', included: false},
+      //{pattern: 'test/**/*Spec.js', included: false},
+      'test/abstractFactoryE2e.js',
+      //'test/test-main.js',
     ],
 
     // list of files to exclude
@@ -35,22 +36,26 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
     //reporters: ['progress', 'coverage', 'junit'],
-	reporters: ['progress','coverage', 'junit'],
-	
+  	reporters: ['progress','coverage', 'junit'],
+  	
     preprocessors: { 
-		//'./test/e2eSpec.js': ['coverage'] ,
-    'js/core/*.js' : ['coverage'] ,
-    'js/helpers/*.js' : ['coverage'] ,
-    'js/patterns/creational/abstractFactory/*.js' : ['coverage'] ,
-	},
-	
-	// optionally, configure the reporter
+  		//'./test/e2eSpec.js': ['coverage'] ,
+      'js/core/*.js' : ['coverage'] ,
+      'js/helpers/*.js' : ['coverage'] ,
+      'js/patterns/creational/abstractFactory/*.js' : ['coverage'] ,
+      'js/patterns/creational/builder/*.js' : ['coverage'] ,
+      'js/patterns/creational/factoryMethod/*.js' : ['coverage'] ,
+      'js/patterns/creational/prototype/*.js' : ['coverage'] ,
+      'js/patterns/creational/singleton/*.js' : ['coverage'] ,
+  	},
+  	
+  	// optionally, configure the reporter
     coverageReporter: {
       type : 'lcov',
       dir : './reports/coverage/'
     },
-	
-	// the default configuration
+  	
+  	// the default configuration
     junitReporter: {
       outputFile: './reports/qunit/TEST-results.xml',
       suite: ''

@@ -14,7 +14,7 @@ define([
     * Log helper
     * @version 1.0
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
-	* @class LogHelper
+	  * @class LogHelper
     */	
     var LogHelper = Class.extend(
 	/** @lends LogHelper.prototype */
@@ -37,8 +37,13 @@ define([
     /**
     * Return stack of messages
     */    
-    get: function () { return this.log; }
-    });
+    get: function () { 
+      var val = this.log;
+      this.log = "";
+      return val; 
+    }
+    
+  });
 
     return LogHelper;
   }
