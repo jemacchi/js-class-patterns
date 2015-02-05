@@ -37,6 +37,7 @@
     "grunt-contrib-connect": "*",
     "grunt-contrib-uglify": "*",
     "karma-mocha": "*",
+    "karma-chai": "*",
     "karma-requirejs": "*",
     "grunt-karma": "*",
 	  "karma-chrome-launcher": "*",

@@ -1,6 +1,6 @@
 // Karma configuration
-
 module.exports = function(config) {
+  'use strict';
   config.set({
 
     // base path, that will be used to resolve files and exclude
@@ -8,15 +8,13 @@ module.exports = function(config) {
 
 
     // frameworks to use
-    frameworks: ['mocha'],
-
+    frameworks: ['mocha','chai'], 
 
     // list of files / patterns to load in the browser
     files: [
-     // './lib/underscore.min.js',
-     // './lib/jquery.min.js',
-      './lib/chai.js',
-     // './lib/karma-e2e-dsl.js',*/
+      './lib/underscore.min.js',
+      './lib/jquery.min.js',
+       './lib/karma-e2e-dsl.js',
       //{pattern: 'lib/**/*.js', included: false},
       //{pattern: 'js/**/*.js', included: false},
       //{pattern: 'test/**/*Spec.js', included: false},
