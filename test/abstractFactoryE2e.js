@@ -5,16 +5,18 @@ describe('Abstract factory pattern e2e tests', function () {
   beforeEach(dsl(function () {
     browser.navigateTo('/index.html');
   }));
-
   
-  /*describe('#Patterns runner tests', function () {
-   
-    it('test 001', dsl(function () {
-      browser.delay(5000);
+  describe('run sample', function () {
+
+    it('run sample tests', dsl(function () {
+      input('#abstractFactoryBtn').click();
+      element('#logContent').text(function (text) {
+        //assert.equal(text,'I am employee Joan DiSilva<br/>'+'I am vendor Gerald Watson<br/>');
+        assert.equal(text,'');
+      });
     }));
 
-  });*/
-
+  });
 
   describe('#reload', function () {
    
