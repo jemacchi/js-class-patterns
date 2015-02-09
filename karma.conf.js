@@ -17,7 +17,7 @@ module.exports = function(config) {
       './lib/karma-e2e-dsl.js',
       {pattern: 'lib/**/*.js', included: false},
       {pattern: 'js/**/*.js', included: false},
-      {pattern: 'test/**/*Spec.js', included: false},
+      //{pattern: 'test/**/*Spec.js', included: false},
       'test/abstractFactoryE2e.js',
       'test/test-main.js',
     ],
@@ -80,7 +80,18 @@ module.exports = function(config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['Chrome'],
+    //browsers: ['Chrome'],
+
+    // Reference to make it working with e2e:
+    // https://groups.google.com/forum/#!topic/angular/VeqlVgUa6Wo
+    browsers: ['chrome_without_security'],
+    
+    customLaunchers: {
+        chrome_without_security: {
+            base: 'Chrome',
+            flags: ['--disable-web-security']
+        }
+    },
 
     urlRoot: '/__karma/',
 
