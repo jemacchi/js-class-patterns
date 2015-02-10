@@ -8,9 +8,21 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
+          hostname: 'localhost',
           port: 8000,
           base: './'
-        }
+        },
+        /*runtime: {
+            options: {
+                middleware: function (connect) {
+                    return [
+                        lrSnippet,
+                        mountFolder(connect, 'instrumented'),
+                        mountFolder(connect, '.......')
+                    ];
+                }
+            }
+        }*/
       }
     },
     watch: {
@@ -35,11 +47,47 @@ module.exports = function(grunt) {
         files: {
           'dist/karma-e2e-dsl.min.js': ['./lib/karma-e2e-dsl.js']
         }
-      }
-    }
+      },
+    },
+    //instrument: {
+    //    files: 'js/**/*.js',
+    //    options: {
+    //    lazy: true,
+    //       basePath: "instrumented"
+    //    }
+    //},
+    /*protractor_coverage: {
+        options: {
+            keepAlive: true,
+            noColor: false,
+            coverageDir: 'reports/protractor/coverage',
+            args: {
+                baseUrl: 'http://localhost:9000'
+            }
+        },
+        local: {
+            options: {
+                configFile: 'test/protractor-local.conf.js'
+            }
+        },
+        travis: {
+            options: {
+                configFile: 'test/protractor-travis.conf.js'
+            }
+        }
+    },*/
+   // makeReport: {
+   //     src: 'reports/protractor/coverage/**/*.json',
+    //    options: {
+   //         type: 'lcov',
+    //        dir: 'reports/protractor/html/',
+   //         print: 'detail'
+    //    }
+    //}
   });
  
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-protractor-coverage');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');

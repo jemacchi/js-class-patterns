@@ -44,7 +44,8 @@
 	  "karma-coverage": "*",
 	  "karma-junit-reporter": "*",
 	  "karma-e2e-dsl": "~0.1.0",
-    "grunt": "~0.4.1"
+    "grunt-protractor-coverage": "*",
+    "grunt": "~0.4.4"
   },
   "author": "Jose Macchi"
 }
