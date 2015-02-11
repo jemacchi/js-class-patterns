@@ -17,7 +17,7 @@ module.exports = function(config) {
       './lib/karma-e2e-dsl.js',
       {pattern: 'lib/**/*.js', included: false},
       {pattern: 'js/**/*.js', included: false},
-      //{pattern: 'test/**/*Spec.js', included: false},
+      {pattern: 'test/**/*Spec.js', included: false},
       'test/abstractFactoryE2e.js',
       'test/test-main.js',
     ],
