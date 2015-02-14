@@ -5,11 +5,18 @@ Library of Classic OOP Patterns implemented in JS.
 
 ## Documentation
 
-We are using projet [CDxD] (https://github.com/jemacchi/cdxd/) to create JSDOC documentation for all patterns (including UML diagrams)
+We are using project [CDxD] (https://github.com/jemacchi/cdxd/) to create JSDOC documentation for all patterns (including UML diagrams)
 
 ## Roadmap/ToDo
 
 * Create more samples, with runner code and documentation (most relevant patterns)
+* Apply unit testing integration + e2e testing (with coverage)
+
+## Version
+
+Following [Semantic Versioning Specs] (http://semver.org/)
+
+Current Version > 0.5.0
 
 ## Author
 
