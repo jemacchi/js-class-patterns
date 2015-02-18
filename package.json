@@ -33,6 +33,7 @@
     "underscore": "~1.5.2",
     "requirejs": "~2.1.4",
     "chai": "*",
+    "phantomjs": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-connect": "*",
     "grunt-contrib-uglify": "*",
@@ -41,11 +42,12 @@
     "karma-requirejs": "*",
     "grunt-karma": "*",
 	  "karma-chrome-launcher": "*",
+    "karma-phantomjs-launcher": "*",
 	  "karma-coverage": "*",
 	  "karma-junit-reporter": "*",
 	  "karma-e2e-dsl": "~0.1.0",
     "grunt-protractor-coverage": "*",
-	"grunt-cli": "*",
+	  "grunt-cli": "*",
     "grunt": "~0.4.4"
   },
   "author": "Jose Macchi"

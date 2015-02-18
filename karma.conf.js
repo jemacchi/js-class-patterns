@@ -84,12 +84,22 @@ module.exports = function(config) {
 
     // Reference to make it working with e2e:
     // https://groups.google.com/forum/#!topic/angular/VeqlVgUa6Wo
-    browsers: ['chrome_without_security'],
+    browsers: ['phantomJS_without_security'],
     
     customLaunchers: {
         chrome_without_security: {
             base: 'Chrome',
             flags: ['--disable-web-security']
+        },
+        phantomJS_without_security: {
+          base: 'PhantomJS',
+          options: {
+            windowName: 'my-window',
+            settings: {
+              webSecurityEnabled: false
+            }
+          },
+          //flags: ['--remote-debugger-port=9000']
         }
     },
 
