@@ -14,7 +14,7 @@ define([
     * AdvancedShipping class (new class)
     * @version 1.0
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
-	* @class AdvancedShipping
+	  * @class AdvancedShipping
     * @cdxd.class AdapterPattern
     */	
     var AdvancedShipping = Adaptee.extend(

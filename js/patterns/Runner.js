@@ -10,8 +10,8 @@ define([
 	'patterns/creational/prototype/Customer',	
 	'patterns/creational/prototype/CustomerPrototype',	
 	'patterns/creational/singleton/Singleton',
-	/*'patterns/creational/singleton/shipping',
-	'patterns/creational/singleton/shippingAdapter',*/
+	'patterns/structural/adapter/shipping',
+	'patterns/structural/adapter/shippingAdapter',
   ],
   /**
    * Patterns examples runner
@@ -19,7 +19,7 @@ define([
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
-  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory, Customer, CustomerPrototype, Singleton/*, Shipping, ShippingAdapter*/) {
+  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory, Customer, CustomerPrototype, Singleton, Shipping, ShippingAdapter) {
     'use strict';
    /**
     * Patterns examples runner
@@ -90,7 +90,7 @@ define([
 			log.show();
 		},
 		runAdapterDemo: function() {
-			/*var shipping = new Shipping();
+			var shipping = new Shipping();
 			var credentials = {token: "30a8-6ee1"};
 			var adapter = new ShippingAdapter(credentials);
 			 
@@ -101,7 +101,10 @@ define([
 			// new shipping object with adapted interface
 			cost = adapter.request("78701", "10010", "2 lbs");
 			 
-			log.add("New cost: " + cost);*/
+			log.add("New cost: " + cost);
+			log.show();		
+		},
+		runUnderDev: function() {
 			log.add("Under development");
 			log.show();		
 		},

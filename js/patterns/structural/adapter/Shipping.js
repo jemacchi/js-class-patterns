@@ -13,7 +13,7 @@ define([
     * Shipping class (old implementation)
     * @version 1.0
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
-	* @class Shipping
+	  * @class Shipping
     * @cdxd.class AdapterPattern
     */	
     var Shipping = Class.extend(

@@ -14,7 +14,7 @@ define([
     * @version 1.0
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
 	* @class Customer
-    * @cdxd.class PrototypePattern
+    * @cdxd.class AdapterPattern
     */	
     var Customer = Class.extend(
 	/** @lends Customer.prototype */
@@ -34,7 +34,7 @@ define([
 		* Shows details on customer
 		*/		
 		say: function () {
-			alert("name: " + this.first + " " + this.last + ", status: " + this.status);
+			log.add("name: " + this.first + " " + this.last + ", status: " + this.status);
 		},	
     });
     return Customer;
