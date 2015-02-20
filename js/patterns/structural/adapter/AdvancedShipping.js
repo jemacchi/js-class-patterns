@@ -16,6 +16,7 @@ define([
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
 	  * @class AdvancedShipping
     * @cdxd.class AdapterPattern
+    * @cdxd.implements AdapterPattern Adaptee abstract 
     */	
     var AdvancedShipping = Adaptee.extend(
 	/** @lends AdvancedShipping.prototype */

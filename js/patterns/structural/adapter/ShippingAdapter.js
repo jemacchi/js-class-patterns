@@ -1,5 +1,6 @@
 define([
 	'class',
+	'./Adapter',
 	'./AdvancedShipping'
   ],
   /**
@@ -8,7 +9,7 @@ define([
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
-  function(Inheritance, AdvancedShipping) {
+  function(Inheritance, Adapter, AdvancedShipping) {
     'use strict';
    /**
     * Shipping adapter class
@@ -16,8 +17,9 @@ define([
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
 	* @class ShippingAdapter
     * @cdxd.class AdapterPattern
+    * @cdxd.implements AdapterPattern Adapter abstract 
     */	
-    var ShippingAdapter = Class.extend(
+    var ShippingAdapter = Adapter.extend(
 	/** @lends ShippingAdapter.prototype */
 	{
 		shipping: null,
