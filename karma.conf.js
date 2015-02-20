@@ -18,7 +18,7 @@ module.exports = function(config) {
       {pattern: 'lib/**/*.js', included: false},
       {pattern: 'js/**/*.js', included: false},
       {pattern: 'test/**/*Spec.js', included: false},
-      'test/abstractFactoryE2e.js',
+      {pattern: 'test/**/*E2e.js', included: true},
       'test/test-main.js',
     ],
 
@@ -37,7 +37,6 @@ module.exports = function(config) {
   	reporters: ['progress','coverage', 'junit'],
   	
     preprocessors: { 
-  		//'./test/e2eSpec.js': ['coverage'] ,
       'js/core/*.js' : ['coverage'] ,
       'js/helpers/*.js' : ['coverage'] ,
       'js/patterns/creational/abstractFactory/*.js' : ['coverage'] ,
@@ -45,6 +44,7 @@ module.exports = function(config) {
       'js/patterns/creational/factoryMethod/*.js' : ['coverage'] ,
       'js/patterns/creational/prototype/*.js' : ['coverage'] ,
       'js/patterns/creational/singleton/*.js' : ['coverage'] ,
+      'js/patterns/structural/adapter/*.js' : ['coverage'] ,
   	},
   	
   	// optionally, configure the reporter

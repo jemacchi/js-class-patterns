@@ -10,8 +10,8 @@ define([
 	'patterns/creational/prototype/Customer',	
 	'patterns/creational/prototype/CustomerPrototype',	
 	'patterns/creational/singleton/Singleton',
-	'patterns/structural/adapter/shipping',
-	'patterns/structural/adapter/shippingAdapter',
+	'patterns/structural/adapter/Shipping',
+	'patterns/structural/adapter/ShippingAdapter',
   ],
   /**
    * Patterns examples runner

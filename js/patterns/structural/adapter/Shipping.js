@@ -19,7 +19,9 @@ define([
     var Shipping = Class.extend(
 	/** @lends Shipping.prototype */
 	{	
-		request: function(zipStart, zipEnd, weight) {},
+		request: function(zipStart, zipEnd, weight) {
+        return "$49.75";
+    },
     });
     return Shipping;
   }

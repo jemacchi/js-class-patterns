@@ -3,7 +3,7 @@ define([
 	'./Adaptee'
   ],
   /**
-   * Shipping class
+   * AdvancedShipping class
    * @exports patters/structural/adapter  
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>

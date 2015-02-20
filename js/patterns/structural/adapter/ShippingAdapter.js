@@ -1,5 +1,6 @@
 define([
 	'class',
+	'./AdvancedShipping'
   ],
   /**
    * Shipping adapter class
@@ -7,36 +8,35 @@ define([
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
-  function(Inheritance) {
+  function(Inheritance, AdvancedShipping) {
     'use strict';
    /**
-    * Customer class (to be cloned)
+    * Shipping adapter class
     * @version 1.0
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
-	* @class Customer
+	* @class ShippingAdapter
     * @cdxd.class AdapterPattern
     */	
-    var Customer = Class.extend(
-	/** @lends Customer.prototype */
+    var ShippingAdapter = Class.extend(
+	/** @lends ShippingAdapter.prototype */
 	{
-		first: '',
-		last: '',
-		status: '',
+		shipping: null,
 		/**
-		* Customer initialization
+		* ShippingAdapter initialization
 		*/
-		init: function (first, last, status) {
-			this.first = first;
-			this.last = last;
-			this.status = status;
+		init: function (credentials) {
+			this.shipping = new AdvancedShipping();
+			this.shipping.login(credentials);
 		},		
 		/**
-		* Shows details on customer
-		*/		
-		say: function () {
-			log.add("name: " + this.first + " " + this.last + ", status: " + this.status);
-		},	
+		* Calculate shipping
+		*/
+		 request: function(zipStart, zipEnd, weight) {
+			this.shipping.setStart(zipStart);
+			this.shipping.setDestination(zipEnd);
+			return this.shipping.calculate(weight);
+		}	
     });
-    return Customer;
+    return ShippingAdapter;
   }
 );

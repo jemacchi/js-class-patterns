@@ -11,7 +11,6 @@ describe('Abstract factory pattern e2e tests', function () {
       input('#abstractFactoryBtn').click();
       element('#logContent').text(function (text) {
         assert.equal(text,"I am employee Joan DiSilvaI am employee Tim O'NeillI am vendor Gerald WatsonI am vendor Nicole McNight");
-        //assert.equal(text,'');
       });
     }));
 
