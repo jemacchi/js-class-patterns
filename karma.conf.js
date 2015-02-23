@@ -9,7 +9,7 @@ module.exports = function(config) {
 
     // frameworks to use
     frameworks: ['mocha','requirejs','chai'], 
-
+	
     // list of files / patterns to load in the browser
     files: [
       './lib/underscore.min.js',
@@ -37,6 +37,7 @@ module.exports = function(config) {
   	reporters: ['progress','coverage', 'junit'],
   	
     preprocessors: { 
+	  'js/**/*.js': ['jshint'],
       'js/core/*.js' : ['coverage'] ,
       'js/helpers/*.js' : ['coverage'] ,
       'js/patterns/creational/abstractFactory/*.js' : ['coverage'] ,
@@ -47,6 +48,12 @@ module.exports = function(config) {
       'js/patterns/structural/adapter/*.js' : ['coverage'] ,
   	},
   	
+	
+	jshintPreprocessor: {
+      jshintrc: './.jshintrc',
+	  stopOnError: false
+    },
+	
   	// optionally, configure the reporter
     coverageReporter: {
       type : 'lcov',
