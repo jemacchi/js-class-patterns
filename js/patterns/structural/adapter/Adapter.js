@@ -15,6 +15,7 @@ define([
     * @author  Jose Macchi <jemacchi@yahoo.com.ar>
 	  * @class Adapter
     * @cdxd.abstract AdapterPattern
+    * @cdxd.associatedWith AdapterPattern Adaptee
     */	
     var Adapter = Class.extend(
 	/** @lends Adapter.prototype */

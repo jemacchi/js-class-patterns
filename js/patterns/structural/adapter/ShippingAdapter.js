@@ -18,6 +18,7 @@ define([
 	* @class ShippingAdapter
     * @cdxd.class AdapterPattern
     * @cdxd.implements AdapterPattern Adapter abstract 
+    * @cdxd.associatedWith AdapterPattern Shipping
     */	
     var ShippingAdapter = Adapter.extend(
 	/** @lends ShippingAdapter.prototype */
