@@ -49,6 +49,7 @@
     "grunt-protractor-coverage": "*",
 	"grunt-cli": "*",
 	"karma-jshint-preprocessor": "*",
+	"karma-complexity-preprocessor": "*",
     "grunt": "~0.4.4"
   },
   "author": "Jose Macchi"

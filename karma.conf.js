@@ -37,7 +37,7 @@ module.exports = function(config) {
   	reporters: ['progress','coverage', 'junit'],
   	
     preprocessors: { 
-	  'js/**/*.js': ['jshint'],
+	  'js/**/*.js': ['jshint','complexity'],
       'js/core/*.js' : ['coverage'] ,
       'js/helpers/*.js' : ['coverage'] ,
       'js/patterns/creational/abstractFactory/*.js' : ['coverage'] ,
@@ -54,6 +54,14 @@ module.exports = function(config) {
 	  stopOnError: false
     },
 	
+	complexityConfig:{
+	  dir:'./reports/complexity/',
+	  logicalor:true,
+	  switchace:true,
+	  forin:true,
+	  trycatch:true,
+	  newmi:true
+	},
   	// optionally, configure the reporter
     coverageReporter: {
       type : 'lcov',
