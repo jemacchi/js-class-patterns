@@ -37,7 +37,7 @@ module.exports = function(config) {
   	reporters: ['progress','coverage', 'junit'],
   	
     preprocessors: { 
-	  'js/**/*.js': ['jshint','complexity'],
+	    //'js/**/*.js': ['jshint','complexity'],
       'js/core/*.js' : ['coverage'] ,
       'js/helpers/*.js' : ['coverage'] ,
       'js/patterns/creational/abstractFactory/*.js' : ['coverage'] ,
@@ -49,10 +49,10 @@ module.exports = function(config) {
   	},
   	
 	
-	jshintPreprocessor: {
+	/*jshintPreprocessor: {
       jshintrc: './.jshintrc',
 	  stopOnError: false
-    },
+    },*/
 	
 	complexityConfig:{
 	  dir:'./reports/complexity/',
