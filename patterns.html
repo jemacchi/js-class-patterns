@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap -->
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" data-main="js/main" src="./lib/require.js"></script>
+	  	<style>
+			body {
+				font: 14px/130% "DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans serif;
+				margin: 30px;
+			}
+			.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+				border: 0 ;
+			}
+	  	</style>
+	</head>
+	<body>
+		<h1>JavaScript Design Patterns</h1>
+		<br><br>
+		<div class="panel panel-default">
+			<table style="width:100%;font-size:15px;" class="table table-bordered">
+				<tbody><tr>
+					<td colspan="2"><h2>Creational Patterns</h2></td>
+				</tr>
+				<tr>
+					<td style="width:20%;border:0;">&nbsp;&nbsp;<a href="./doc/class-AbstractFactoryPattern.html">Abstract Factory</a></td>
+					<td style="width:60%;border:0;">Creates an instance of several families of classes</td>
+					<td style="width:10%;border:0;">
+						<button id="abstractFactoryBtn" type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runAbstractFactoryDemo();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/creational/abstractFactory/'">See code...
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/class-BuilderPattern.html">Builder</a></td>
+					<td>Separates object construction from its representation</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runBuilderDemo();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/creational/builder/'">See code...
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/class-FactoryMethodPattern.html">Factory Method</a></td>
+					<td>Creates an instance of several derived classes</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runFactoryMethodDemo();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/creational/factoryMethod/'">See code...
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/class-PrototypePattern.html">Prototype</a></td>
+					<td>A fully initialized instance to be copied or cloned</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runPrototypeDemo();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/creational/prototype/'">See code...
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/class-SingletonPattern.html">Singleton</a></td>
+					<td>A class of which only a single instance can exist</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runSingletonDemo();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/creational/singleton/'">See code...
+						</button>
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+		<br>
+
+		<div class="panel panel-default">
+			<table style="width:100%;font-size:15px;" class="table table-bordered">
+				<tbody><tr>
+					<td colspan="2"><h2>Structural Patterns</h2></td>
+				</tr>
+				<tr>
+					<td style="width:20%;border:0;">&nbsp;&nbsp;<a href="./doc/index.html">Adapter</a></td>
+					<td style="width:60%;border:0;">Match interfaces of different classes</td>
+					<td style="width:10%;border:0;">
+						<button id="adapterBtn" type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runAdapterDemo();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/structural/adapter/'">See code...
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Bridge</a></td>
+					<td>Separates an object's interface from its implementation</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/structural/'">See code...
+						</button>
+					</td>								
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Composite</a></td>
+					<td>A tree structure of simple and composite objects</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/structural/'">See code...
+						</button>
+					</td>			
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Decorator</a></td>
+					<td>Add responsibilities to objects dynamically</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/structural/'">See code...
+						</button>
+					</td>				
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Facade</a></td>
+					<td>A single class that represents an entire subsystem</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/structural/'">See code...
+						</button>
+					</td>			
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Flyweight</a></td>
+					<td>A fine-grained instance used for efficient sharing</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/structural/'">See code...
+						</button>
+					</td>			
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Proxy</a></td>
+					<td>An object representing another object</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/structural/'">See code...
+						</button>
+					</td>			
+				</tr>
+			</tbody></table>
+		</div>
+		<br>
+
+		<div class="panel panel-default">
+			<table style="width:100%;font-size:15px;" class="table table-bordered">
+				<tbody><tr>
+					<td colspan="2"><h2>Behavioral Patterns</h2></td>
+				</tr>
+				<tr>
+					<td style="width:20%;border:0;">&nbsp;&nbsp;<a href="./doc/index.html">Chain of Resp.</a></td>
+					<td style="width:60%;border:0;">A way of passing a request between a chain of objects</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>	
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Command</a></td>
+					<td>Encapsulate a command request as an object</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>					
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Interpreter</a></td>
+					<td>A way to include language elements in a program</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>				
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Iterator</a></td>
+					<td>Sequentially access the elements of a collection</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>				
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Mediator</a></td>
+					<td>Defines simplified communication between classes</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>				
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Memento</a></td>
+					<td>Capture and restore an object's internal state</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>			
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Observer</a></td>
+					<td>A way of notifying change to a number of classes</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>			
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">State</a></td>
+					<td>Alter an object's behavior when its state changes</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>	
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Strategy</a></td>
+					<td>Encapsulates an algorithm inside a class</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>			
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Template Method</a></td>
+					<td>Defer the exact steps of an algorithm to a subclass</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>		
+				</tr>
+				<tr>
+					<td>&nbsp;&nbsp;<a href="./doc/index.html">Visitor</a></td>
+					<td>Defines a new operation to a class without change</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-info dropdown-toggle" onclick="demosRunner.runUnderDev();">Run
+						</button>
+					</td>
+					<td style="width:10%;border:0;">
+						<button type="button" class="btn btn-primary dropdown-toggle" onclick="location.href='./js/patterns/behavioral/'">See code...
+						</button>
+					</td>				
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="modal fade"  id="logModal">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Log</h4>
+	      </div>
+	      <div id="logContent" class="modal-body">
+	        <p>One fine body&hellip;</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./lib/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./lib/bootstrap.min.js"></script>
+	</body>
+</html>
