@@ -1,0 +1,6 @@
+{
+  "name": "Js-class-patterns",
+  "tagline": "Library of Classic OOP Patterns implemented in JS",
+  "body": "js-class-patterns\r\n=================\r\n\r\nLibrary of Classic OOP Patterns implemented in JS.\r\n\r\n## Documentation\r\n\r\nWe are using project [CDxD] (https://github.com/jemacchi/cdxd/) to create JSDOC documentation for all patterns (including UML diagrams)\r\n\r\n## Roadmap/ToDo\r\n\r\n* Create more samples, with runner code and documentation (most relevant patterns)\r\n* Apply unit testing integration + e2e testing (with coverage)\r\n\r\n## Version\r\n\r\nFollowing [Semantic Versioning Specs] (http://semver.org/)\r\n\r\nCurrent Version > 0.5.0\r\n\r\n## Author\r\n\r\n[Jose Macchi](https://github.com/jemacchi)\r\n\r\nDocumentation and examples based on http://www.dofactory.com/javascript/design-patterns .\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
