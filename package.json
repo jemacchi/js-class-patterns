@@ -1,6 +1,6 @@
 {
   "name": "js-class-patterns",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Library of Classic OOP Patterns implemented in JS",
   "homepage": "https://github.com/jemacchi/js-class-patterns",
   "repository": {
@@ -30,6 +30,9 @@
     "requirejs": "~2.1.4"
   },
   "devDependencies": {
+    "jsdoc": "~3.4.0",
+    "jsdoc-cdxd": "~0.2.0",
+    "grunt-jsdoc": "~2.1.0",
     "underscore": "~1.5.2",
     "requirejs": "~2.1.4",
     "chai": "*",

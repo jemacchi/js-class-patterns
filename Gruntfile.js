@@ -49,6 +49,16 @@ module.exports = function(grunt) {
         }
       },
     },
+    jsdoc : {
+        dist : {
+            src: ['./js/**/*.js'],
+            options: {
+                destination: './doc',
+                template : "./node_modules/jsdoc-cdxd/templates/cdxd",
+                configure : "./node_modules/jsdoc-cdxd/conf.json"
+            }
+        }
+    }
     //instrument: {
     //    files: 'js/**/*.js',
     //    options: {
@@ -92,8 +102,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-karma');
+  grunt.loadNpmTasks('grunt-jsdoc');
  
   // Default task.
-  grunt.registerTask('test', ['connect', 'uglify', 'karma:e2e']);
+  grunt.registerTask('test', ['connect', 'uglify', 'karma:e2e', 'jsdoc']);
  
 };
