@@ -3,7 +3,7 @@ define([
   ],
   /**
    * Singleton
-   * @exports patters/creational/singleton
+   * @exports patterns/creational/singleton
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	

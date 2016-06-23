@@ -4,7 +4,7 @@ define([
   ],
   /**
    * Mouse class
-   * @exports patters/structural/bridge 
+   * @exports patterns/structural/bridge 
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	

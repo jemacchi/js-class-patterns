@@ -3,7 +3,7 @@ define([
   ],
   /**
    * Adapter class
-   * @exports patters/structural/adapter  
+   * @exports patterns/structural/adapter  
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
