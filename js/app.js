@@ -14,9 +14,6 @@ define([
 	demosRunner = new PatternsRunner();
 	
     var init = function() {
-	  //var aPatternsRunner = new PatternsRunner();
-	  //aPatternsRunner.runAbstractFactoryDemo();
-	  //aPatternsRunner.runBuilderDemo();
     };
 
     return {

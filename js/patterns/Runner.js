@@ -12,6 +12,10 @@ define([
 	'patterns/creational/singleton/Singleton',
 	'patterns/structural/adapter/Shipping',
 	'patterns/structural/adapter/ShippingAdapter',
+	'patterns/structural/bridge/Gestures',
+	'patterns/structural/bridge/Mouse',
+	'patterns/structural/bridge/Audio',
+	'patterns/structural/bridge/Screen',
   ],
   /**
    * Patterns examples runner
@@ -19,7 +23,7 @@ define([
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
-  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory, Customer, CustomerPrototype, Singleton, Shipping, ShippingAdapter) {
+  function(Inheritance, Vendor, Employee, ConcreteFactory, Shop, CarBuilder, TruckBuilder, Factory, Customer, CustomerPrototype, Singleton, Shipping, ShippingAdapter, Gestures, Mouse, Audio, Screen) {
     'use strict';
    /**
     * Patterns examples runner
@@ -103,6 +107,25 @@ define([
 			 
 			log.add("New cost: " + cost);
 			log.show();		
+		},
+		runBridgeDemo: function() {
+			var screen = new Screen();
+			var audio = new Audio();
+		
+			var hand = new Gestures();
+			hand.init(screen);
+			var mouse = new Mouse();
+			mouse.init(audio);
+		
+			log.add(hand.tap());
+			log.add(hand.swipe());
+			log.add(hand.pinch());
+		
+			log.add(mouse.click());
+			log.add(mouse.move());
+			log.add(mouse.wheel());
+		
+			log.show();
 		},
 		runUnderDev: function() {
 			log.add("Under development");
