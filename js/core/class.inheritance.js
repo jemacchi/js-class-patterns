@@ -1,3 +1,7 @@
+/* Simple JavaScript Inheritance
+ * By John Resig http://ejohn.org/
+ * MIT Licensed.
+ */
 // Inspired by base2 and Prototype
 (
   /**
@@ -5,7 +9,7 @@
    * every class on the application.
    * @exports core   
    * @version 1.0
-   * @author  Jose Macchi <jemacchi@yahoo.com.ar>
+   * @author  John Resig 
    */	
 function(){
   var initializing = false,
@@ -16,9 +20,9 @@ function(){
    * Simple JavaScript Inheritance. Base Inheritance Class to be extended by
    * every class on the application.
    *
-   * @author  Jose macchi <jemacchi@yahoo.com.ar>
+   * @author  John Resig 
    * @class Class
-   * Based on John Resig inheritance
+   * Based on John Resig inheritance, documentation by Jose Macchi, included by Mauro Buselli
    */  
   this.Class = function(){};
 	
