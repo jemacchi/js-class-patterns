@@ -7,7 +7,7 @@ define([
   ],
   /**
    * Factory Method class
-   * @exports patters/creational/factoryMethod
+   * @exports patterns/creational/factoryMethod
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	

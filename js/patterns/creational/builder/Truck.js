@@ -3,7 +3,7 @@ define([
   ],
   /**
    * Truck product class
-   * @exports patters/creational/builder   
+   * @exports patterns/creational/builder   
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	

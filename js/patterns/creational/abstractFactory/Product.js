@@ -3,7 +3,7 @@ define([
   ],
   /**
    * Base Product class
-   * @exports patters/creational/abstractFactory   
+   * @exports patterns/creational/abstractFactory   
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	

@@ -4,7 +4,7 @@ define([
   ],
   /**
    * CustomerPrototype class
-   * @exports patters/creational/prototype   
+   * @exports patterns/creational/prototype   
    * @version 1.0
    * @author  Jose Macchi <jemacchi@yahoo.com.ar>
    */	
