@@ -18,7 +18,7 @@ module.exports = function(config) {
       {pattern: 'lib/**/*.js', included: false},
       {pattern: 'js/**/*.js', included: false},
       {pattern: 'test/**/*Spec.js', included: false},
-      {pattern: 'test/**/*E2e.js', included: true},
+   //   {pattern: 'test/**/*E2e.js', included: true},
       'test/test-main.js',
     ],
 
@@ -46,6 +46,7 @@ module.exports = function(config) {
       'js/patterns/creational/prototype/*.js' : ['coverage'] ,
       'js/patterns/creational/singleton/*.js' : ['coverage'] ,
       'js/patterns/structural/adapter/*.js' : ['coverage'] ,
+      'js/patterns/structural/bridge/*.js' : ['coverage'] ,
   	},
   	
 	
